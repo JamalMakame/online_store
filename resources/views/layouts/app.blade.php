@@ -9,15 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 
-
-
-
-
     <title>@yield('title', 'Online Store')</title>
 </head>
 
 <body>
-
     {{-- HeaderSection --}}
     <nav class="navbar navbar-expand-lg  bg-secondary">
         <div class="container-fluid">
@@ -64,7 +59,6 @@
                                     document.getElementById('logout').submit();">Logout</a>
                             </li>
                         </form>
-
                     @endguest
                 </ul>
                 <span class="navbar-text">

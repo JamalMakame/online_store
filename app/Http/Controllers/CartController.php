@@ -33,6 +33,8 @@ class CartController extends Controller
         $request->session()->put('products', $products);
         return redirect()->route('cart.index');
     }
+
+    
     public function delete(Request $request)
     {
         $request->session()->remove('products');
