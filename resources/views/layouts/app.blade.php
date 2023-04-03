@@ -51,6 +51,11 @@
                             <a class="nav-link" href="{{ route('register') }}">Register</a>
                         </li>
                     @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('myaccount.orders') }}">
+                                My Orders
+                            </a>
+                        </li>
                         <form id="logout" action="{{ route('logout') }}" method="post">
                             @csrf
                             <li class="nav-item">

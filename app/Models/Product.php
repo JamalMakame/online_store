@@ -28,7 +28,11 @@ class Product extends Model
         return $this->hasMany(Item::class);
     }
 
-    
+    public function getName()
+    {
+        return $this->name;
+    }
+
     public function getPrice()
     {
         return $this->price;

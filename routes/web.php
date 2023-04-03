@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MyAccountController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,10 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/admin/product/{id}/delete', 'delete')->name('admin.product.delete');
         Route::get('/admin/product/{id}/edit', 'edit')->name('admin.product.edit');
         Route::put('/admin/product/{id}/update', 'update')->name('admin.product.update');
+    });
+
+    Route::controller(MyAccountController::class)->group(function () {
+        Route::get('/myaccount/orders', 'orders')->name('myaccount.orders');
     });
 });
 
